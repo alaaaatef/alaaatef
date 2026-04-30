@@ -23,22 +23,29 @@ function Ring({
         const x = Math.cos(angle) * radius;
         const y = Math.sin(angle) * radius;
         return (
-          <button
+          <div
             key={ic.name + i}
-            onMouseEnter={() => onPick(ic)}
-            onClick={() => onPick(ic)}
-            className="absolute left-1/2 top-1/2 grid h-12 w-12 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border border-white/10 bg-black/60 backdrop-blur transition hover:scale-110 hover:border-[#00d4aa]"
-            style={{
-              transform: `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`,
-              animation: `${reverse ? "orbit-rotate" : "orbit-rotate-rev"} ${duration}s linear infinite`,
-              animationPlayState: paused ? "paused" : "running",
-            }}
-            aria-label={ic.name}
+            className="absolute left-1/2 top-1/2"
+            style={{ transform: `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))` }}
           >
-            <svg viewBox="0 0 24 24" className="h-6 w-6" style={{ fill: ic.color }}>
-              <path d={ic.path} />
-            </svg>
-          </button>
+            <div
+              style={{
+                animation: `${reverse ? "orbit-rotate" : "orbit-rotate-rev"} ${duration}s linear infinite`,
+                animationPlayState: paused ? "paused" : "running",
+              }}
+            >
+              <button
+                onMouseEnter={() => onPick(ic)}
+                onClick={(e) => { e.stopPropagation(); onPick(ic); }}
+                className="grid h-12 w-12 place-items-center rounded-full border border-white/10 bg-black/60 backdrop-blur transition hover:scale-110 hover:border-[#00d4aa]"
+                aria-label={ic.name}
+              >
+                <svg viewBox="0 0 24 24" className="h-6 w-6" style={{ fill: ic.color }}>
+                  <path d={ic.path} />
+                </svg>
+              </button>
+            </div>
+          </div>
         );
       })}
     </div>
