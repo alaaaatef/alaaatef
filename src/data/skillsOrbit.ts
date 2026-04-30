@@ -31,7 +31,7 @@ export const innerOrbit: OrbitIcon[] = [
   make(siPython),
   { name: "Power BI", path: CHART_PATH, color: "#F2C811" },
   { name: "SQL", path: DB_PATH, color: "#00d4aa" },
-  make(siMicrosoftexcel, "Excel"),
+  { name: "Excel", path: EXCEL_PATH, color: "#217346" },
 ];
 
 export const middleOrbit: OrbitIcon[] = [
@@ -49,7 +49,7 @@ export const outerOrbit: OrbitIcon[] = [
   make(siOdoo),
   make(siTensorflow),
   make(siPytorch),
-  make(siTableau),
+  { name: "Tableau", path: TABLEAU_PATH, color: "#E97627" },
   make(siGooglecolab, "Colab"),
   make(siGithub),
 ];
