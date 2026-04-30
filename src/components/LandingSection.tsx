@@ -250,7 +250,3 @@ export function LandingSection({ images }: { images: HTMLImageElement[] }) {
   );
 }
 
-function useStateBool(initial: boolean) {
-  const [v, set] = (require("react") as typeof import("react")).useState(initial);
-  return [v, set] as const;
-}
