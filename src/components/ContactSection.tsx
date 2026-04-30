@@ -49,21 +49,6 @@ export function ContactSection() {
             </a>
           ))}
         </div>
-
-        <div className="mx-auto mt-14 max-w-3xl rounded-2xl border border-gray-800 bg-[#0a0a0a] p-8 text-left">
-          <h3 className="font-display text-2xl font-bold text-white">Own this portfolio</h3>
-          <p className="mt-2 text-sm text-gray-400">
-            Get your own premium AI-powered portfolio built like this one — designed to showcase your work and land the role.
-          </p>
-          <a
-            href="https://ai.alaa.com/portfolio"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-5 inline-block rounded-full bg-[#00d4aa] px-5 py-2.5 text-sm font-bold text-black transition hover:bg-[#00b894]"
-          >
-            Claim My Portfolio →
-          </a>
-        </div>
       </div>
     </section>
   );
