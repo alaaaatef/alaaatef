@@ -1,7 +1,7 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { FRAME_COUNT, FRAME_URLS } from "@/config/frames";
+import { FRAME_COUNT } from "@/config/frames";
 import { heroBlocks } from "@/data/content";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -136,12 +136,7 @@ function TextContentBlock({ block, index }: { block: typeof heroBlocks[number]; 
 
 export function LandingSection({ images }: { images: HTMLImageElement[] }) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [isLanding, setIsLanding] = (function () {
-    // simple state via ref + force update is overkill; use local helper
-    const r = useRef(true);
-    const force = useRef<() => void>(() => {});
-    return [r.current, force.current];
-  })() as any; // placeholder unused
+  const [showNav, setShowNav] = useState(true);
 
   // up/down buttons
   const navTo = (dir: "up" | "down") => {
@@ -164,7 +159,6 @@ export function LandingSection({ images }: { images: HTMLImageElement[] }) {
   };
 
   // hide nav buttons when about is near top
-  const [showNav, setShowNav] = useStateBool(true);
   useEffect(() => {
     const onScroll = () => {
       const about = document.getElementById("about");
