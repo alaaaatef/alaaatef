@@ -1,8 +1,12 @@
 import {
   siPython, siPandas, siScikitlearn, siJupyter, siGit, siNumpy,
-  siMicrosoftexcel, siMicrosoft, siTensorflow, siPytorch, siTableau,
+  siTensorflow, siPytorch,
   siGithub, siGooglecolab, siOdoo,
 } from "simple-icons";
+
+const EXCEL_PATH = "M21.53 4.306H15.97v1.6h1.484v1.5H15.97v.997h1.484v1.5H15.97v.997h1.484v1.5H15.97v.997h1.484v1.5H15.97v.997h1.484v1.5H15.97v1.6h5.56c.260 0 .47-.21.47-.47V4.776c0-.260-.21-.47-.47-.47zM2 5.5L9.5 4v16L2 18.5v-13zm4 4l1.3 2.5L6 14.5h1.2L8 12.7l.8 1.8H10l-1.3-2.5L10 9.5H8.8L8 11.3 7.2 9.5H6z";
+const TABLEAU_PATH = "M11.654.174v2.377H9.682v1.45h1.972v2.378h.696V4.001h1.972v-1.45h-1.972V.174h-.696zM6.293 5.155v2.377H4.32v1.45h1.972v2.378h.696V8.982H8.96v-1.45H6.989V5.155h-.696zm10.718 0v2.377h-1.972v1.45h1.972v2.378h.696V8.982h1.972v-1.45h-1.972V5.155h-.696zM2.474 11.31v1.523H.502v.928h1.972v1.523h.696v-1.523h1.972v-.928H3.17V11.31h-.696zm18.353 0v1.523h-1.972v.928h1.972v1.523h.696v-1.523h1.972v-.928h-1.972V11.31h-.696zm-9.176 1.45v2.377H9.679v1.45h1.972v2.378h.696v-2.378h1.972v-1.45h-1.972V12.76h-.696z";
+const MS_PATH = "M0 0h11.377v11.372H0zm12.623 0H24v11.372H12.623zM0 12.623h11.377V24H0zm12.623 0H24V24H12.623z";
 
 export type OrbitIcon = {
   name: string;
