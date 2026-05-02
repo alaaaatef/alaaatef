@@ -36,18 +36,18 @@ export function FrameSequence({ images }: { images: HTMLImageElement[] }) {
       const ir = img.naturalWidth / img.naturalHeight;
       const cr = cw / ch;
       let dw, dh;
+      // Scale to contain the full image height (so face is never clipped)
+      // then center both axes
+      const scale = isMobile ? 0.85 : 0.92;
       if (ir > cr) {
-        // wider image — fit height, center horizontally
-        dh = ch;
+        dh = ch * scale;
         dw = dh * ir;
       } else {
-        // taller image — fit width, image overflows bottom
-        dw = cw;
+        dw = cw * scale;
         dh = dw / ir;
       }
       const dx = (cw - dw) / 2;
-      // top-align: face at top stays visible, body overflows at bottom
-      const dy = 0;
+      const dy = (ch - dh) / 2;
       ctx.globalAlpha = alpha;
       ctx.drawImage(img, dx, dy, dw, dh);
       ctx.globalAlpha = 1;
