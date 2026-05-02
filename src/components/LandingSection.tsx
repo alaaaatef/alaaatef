@@ -34,7 +34,7 @@ export function FrameSequence({ images }: { images: HTMLImageElement[] }) {
       const cw = canvas.width;
       const ch = canvas.height;
       const targetH = isMobile ? ch * 0.8 : ch;
-      const zoom = isMobile ? 1 : 1.13;
+      const zoom = isMobile ? 1 : 1;
       const ir = img.naturalWidth / img.naturalHeight;
       const cr = cw / targetH;
       let dw, dh;
@@ -46,7 +46,7 @@ export function FrameSequence({ images }: { images: HTMLImageElement[] }) {
         dh = dw / ir;
       }
       const dx = (cw - dw) / 2;
-      const dy = (targetH - dh) / 2;
+      const dy = 0; // align to top so the face is visible
       ctx.globalAlpha = alpha;
       ctx.drawImage(img, dx, dy, dw, dh);
       ctx.globalAlpha = 1;
