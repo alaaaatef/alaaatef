@@ -27,7 +27,7 @@ export function Header() {
             <a
               key={l.href}
               href={l.href}
-              className="nav-item group relative text-xs font-medium uppercase tracking-[0.2em] text-gray-400 transition-colors hover:text-[#00d4aa]"
+              className="nav-item group relative text-xs font-medium uppercase tracking-[0.2em] text-gray-300 transition-colors hover:text-[#00d4aa]"
             >
               {l.label}
               <span className="absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-[#00d4aa] transition-transform group-hover:scale-x-100" />
