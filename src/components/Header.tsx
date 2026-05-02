@@ -6,18 +6,12 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const header = document.querySelector(".site-header");
-    const navItems = document.querySelectorAll(".nav-item");
-    if (header) {
-      gsap.fromTo(header, { y: -40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: "power3.out" });
-    }
-    if (navItems.length) {
-      gsap.fromTo(navItems, { x: 30, opacity: 0 }, { x: 0, opacity: 1, duration: 0.6, stagger: 0.06, delay: 0.2, ease: "power3.out" });
-    }
+    gsap.from(".site-header", { y: -40, opacity: 0, duration: 0.8, ease: "power3.out" });
+    gsap.from(".nav-item", { x: 30, opacity: 0, duration: 0.6, stagger: 0.06, delay: 0.2, ease: "power3.out" });
   }, []);
 
   return (
-    <header className={`site-header fixed inset-x-0 top-0 z-50 ${open ? "bg-[#0a0a0a]" : "bg-black/70 backdrop-blur-md"}`}>
+    <header className={`site-header fixed inset-x-0 top-0 z-50 ${open ? "bg-[#0a0a0a]" : "bg-black/30 backdrop-blur-md"}`}>
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8">
         <a
           href="#top"
@@ -33,7 +27,7 @@ export function Header() {
             <a
               key={l.href}
               href={l.href}
-              className="nav-item group relative text-xs font-medium uppercase tracking-[0.2em] text-gray-300 transition-colors hover:text-[#00d4aa]"
+              className="nav-item group relative text-xs font-medium uppercase tracking-[0.2em] text-gray-400 transition-colors hover:text-[#00d4aa]"
             >
               {l.label}
               <span className="absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-[#00d4aa] transition-transform group-hover:scale-x-100" />
