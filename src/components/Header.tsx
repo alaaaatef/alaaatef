@@ -6,8 +6,14 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    gsap.from(".site-header", { y: -40, opacity: 0, duration: 0.8, ease: "power3.out" });
-    gsap.from(".nav-item", { x: 30, opacity: 0, duration: 0.6, stagger: 0.06, delay: 0.2, ease: "power3.out" });
+    const header = document.querySelector(".site-header");
+    const navItems = document.querySelectorAll(".nav-item");
+    if (header) {
+      gsap.fromTo(header, { y: -40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: "power3.out" });
+    }
+    if (navItems.length) {
+      gsap.fromTo(navItems, { x: 30, opacity: 0 }, { x: 0, opacity: 1, duration: 0.6, stagger: 0.06, delay: 0.2, ease: "power3.out" });
+    }
   }, []);
 
   return (
