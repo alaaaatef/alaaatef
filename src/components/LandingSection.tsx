@@ -33,20 +33,21 @@ export function FrameSequence({ images }: { images: HTMLImageElement[] }) {
       if (!img || !img.complete || img.naturalWidth === 0) return;
       const cw = canvas.width;
       const ch = canvas.height;
-      const targetH = isMobile ? ch * 0.8 : ch;
-      const zoom = isMobile ? 1 : 1.13;
       const ir = img.naturalWidth / img.naturalHeight;
-      const cr = cw / targetH;
+      const cr = cw / ch;
       let dw, dh;
+      // Scale to contain the full image height (so face is never clipped)
+      // then center both axes
+      const scale = isMobile ? 0.85 : 0.92;
       if (ir > cr) {
-        dh = targetH * zoom;
+        dh = ch * scale;
         dw = dh * ir;
       } else {
-        dw = cw * zoom;
+        dw = cw * scale;
         dh = dw / ir;
       }
       const dx = (cw - dw) / 2;
-      const dy = (targetH - dh) / 2;
+      const dy = (ch - dh) / 2;
       ctx.globalAlpha = alpha;
       ctx.drawImage(img, dx, dy, dw, dh);
       ctx.globalAlpha = 1;
