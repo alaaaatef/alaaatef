@@ -33,20 +33,23 @@ export function FrameSequence({ images }: { images: HTMLImageElement[] }) {
       if (!img || !img.complete || img.naturalWidth === 0) return;
       const cw = canvas.width;
       const ch = canvas.height;
-      const targetH = isMobile ? ch * 0.8 : ch;
-      const zoom = isMobile ? 1 : 1;
       const ir = img.naturalWidth / img.naturalHeight;
-      const cr = cw / targetH;
+      const cr = cw / ch;
       let dw, dh;
+      // Cover the canvas but keep the top of the image visible
       if (ir > cr) {
-        dh = targetH * zoom;
+        // image is wider than canvas ratio — match height, center horizontally
+        dh = ch;
         dw = dh * ir;
       } else {
-        dw = cw * zoom;
+        // image is taller than canvas ratio — match width, align top
+        dw = cw;
         dh = dw / ir;
       }
       const dx = (cw - dw) / 2;
-      const dy = 0; // align to top so the face is visible
+      // Shift image down slightly so the head/face area is visible
+      // 0 = top-aligned; positive = shift down (show more of top)
+      const dy = isMobile ? 0 : Math.min(0, (ch - dh) * 0.15);
       ctx.globalAlpha = alpha;
       ctx.drawImage(img, dx, dy, dw, dh);
       ctx.globalAlpha = 1;
