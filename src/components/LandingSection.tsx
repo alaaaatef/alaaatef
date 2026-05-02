@@ -36,20 +36,18 @@ export function FrameSequence({ images }: { images: HTMLImageElement[] }) {
       const ir = img.naturalWidth / img.naturalHeight;
       const cr = cw / ch;
       let dw, dh;
-      // Cover the canvas but keep the top of the image visible
       if (ir > cr) {
-        // image is wider than canvas ratio — match height, center horizontally
+        // wider image — fit height, center horizontally
         dh = ch;
         dw = dh * ir;
       } else {
-        // image is taller than canvas ratio — match width, align top
+        // taller image — fit width, image overflows bottom
         dw = cw;
         dh = dw / ir;
       }
       const dx = (cw - dw) / 2;
-      // Shift image down slightly so the head/face area is visible
-      // 0 = top-aligned; positive = shift down (show more of top)
-      const dy = isMobile ? 0 : Math.min(0, (ch - dh) * 0.15);
+      // top-align: face at top stays visible, body overflows at bottom
+      const dy = 0;
       ctx.globalAlpha = alpha;
       ctx.drawImage(img, dx, dy, dw, dh);
       ctx.globalAlpha = 1;
