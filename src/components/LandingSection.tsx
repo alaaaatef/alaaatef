@@ -36,8 +36,8 @@ export function FrameSequence({ images }: { images: HTMLImageElement[] }) {
       const ir = img.naturalWidth / img.naturalHeight;
       const cr = cw / ch;
       let dw, dh;
-      // Cover the canvas but keep face visible by shifting down
-      const scale = isMobile ? 0.95 : 1.0;
+      // Contain image fully so face is never clipped
+      const scale = isMobile ? 0.88 : 0.93;
       if (ir > cr) {
         dh = ch * scale;
         dw = dh * ir;
@@ -46,8 +46,7 @@ export function FrameSequence({ images }: { images: HTMLImageElement[] }) {
         dh = dw / ir;
       }
       const dx = (cw - dw) / 2;
-      // Push image down so face/eyes are in frame
-      const dy = (ch - dh) * 0.3;
+      const dy = (ch - dh) / 2;
       ctx.globalAlpha = alpha;
       ctx.drawImage(img, dx, dy, dw, dh);
       ctx.globalAlpha = 1;
