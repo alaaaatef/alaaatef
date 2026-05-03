@@ -17,7 +17,7 @@ export function Header() {
   }, []);
 
   return (
-    <header className={`site-header fixed inset-x-0 top-0 z-50 ${open ? "bg-[#0a0a0a]" : "bg-black/70 backdrop-blur-md"}`}>
+    <header className={`site-header fixed inset-x-0 top-0 z-50 ${open ? "bg-[#0a0a0a]" : "bg-transparent backdrop-blur-sm"}`}>
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8">
         <a
           href="#top"
@@ -40,7 +40,7 @@ export function Header() {
             </a>
           ))}
           <a
-            href="/Alaa_Atef_CV.pdf"
+            href="/Alaa CV.pdf"
             download
             className="nav-item rounded-full border border-[#6b4f3a] bg-black/50 px-4 py-2 text-xs font-medium uppercase tracking-widest text-white transition hover:bg-black/80"
           >
@@ -73,7 +73,7 @@ export function Header() {
               </a>
             ))}
             <a
-              href="/Alaa_Atef_CV.pdf"
+              href="/Alaa CV.pdf"
               download
               onClick={() => setOpen(false)}
               className="mt-4 rounded-full border border-[#6b4f3a] bg-black/50 px-4 py-3 text-center text-xs uppercase tracking-widest text-white"

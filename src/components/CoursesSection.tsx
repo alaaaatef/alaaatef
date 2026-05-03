@@ -29,10 +29,13 @@ export function CoursesSection() {
   const ref = useRef<HTMLElement>(null);
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from(".course-card", {
-        scrollTrigger: { trigger: ref.current, start: "top 75%" },
-        y: 30, opacity: 0, duration: 0.7, stagger: 0.1, ease: "power3.out",
-      });
+      gsap.fromTo(".course-card",
+        { y: 30, opacity: 0 },
+        {
+          scrollTrigger: { trigger: ref.current, start: "top 75%" },
+          y: 0, opacity: 1, duration: 0.7, stagger: 0.1, ease: "power3.out",
+        }
+      );
     }, ref);
     return () => ctx.revert();
   }, []);

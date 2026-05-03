@@ -36,9 +36,8 @@ export function FrameSequence({ images }: { images: HTMLImageElement[] }) {
       const ir = img.naturalWidth / img.naturalHeight;
       const cr = cw / ch;
       let dw, dh;
-      // Scale to contain the full image height (so face is never clipped)
-      // then center both axes
-      const scale = isMobile ? 0.85 : 0.92;
+      // Contain image fully so face is never clipped
+      const scale = isMobile ? 0.75 : 0.82;
       if (ir > cr) {
         dh = ch * scale;
         dw = dh * ir;

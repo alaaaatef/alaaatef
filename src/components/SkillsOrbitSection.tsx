@@ -12,7 +12,7 @@ function Ring({
 }) {
   return (
     <div
-      className="absolute inset-0"
+      className="pointer-events-none absolute inset-0"
       style={{
         animation: `${reverse ? "orbit-rotate-rev" : "orbit-rotate"} ${duration}s linear infinite`,
         animationPlayState: paused ? "paused" : "running",
@@ -37,7 +37,7 @@ function Ring({
               <button
                 onMouseEnter={() => onPick(ic)}
                 onClick={(e) => { e.stopPropagation(); onPick(ic); }}
-                className="grid h-12 w-12 place-items-center rounded-full border border-white/10 bg-black/60 backdrop-blur transition hover:scale-110 hover:border-[#00d4aa]"
+                className="pointer-events-auto grid h-12 w-12 place-items-center rounded-full border border-white/10 bg-black/60 backdrop-blur transition hover:scale-110 hover:border-[#00d4aa]"
                 aria-label={ic.name}
               >
                 <svg viewBox="0 0 24 24" className="h-6 w-6" style={{ fill: ic.color }}>
