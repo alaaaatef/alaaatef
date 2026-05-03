@@ -36,18 +36,20 @@ export function FrameSequence({ images }: { images: HTMLImageElement[] }) {
       const ir = img.naturalWidth / img.naturalHeight;
       const cr = cw / ch;
       let dw, dh;
-      // Scale to contain the full image height (so face is never clipped)
-      // then center both axes
-      const scale = isMobile ? 0.85 : 0.92;
+      // Scale to show the full image with face visible
+      // Use object-fit cover behavior: fill the canvas, crop overflow
       if (ir > cr) {
-        dh = ch * scale;
+        // image wider than canvas — fit height, crop sides
+        dh = ch;
         dw = dh * ir;
       } else {
-        dw = cw * scale;
+        // image taller than canvas — fit width, crop bottom
+        dw = cw;
         dh = dw / ir;
       }
       const dx = (cw - dw) / 2;
-      const dy = (ch - dh) / 2;
+      // Align top so face is visible (shift image up slightly)
+      const dy = Math.min(0, (ch - dh) * 0.15);
       ctx.globalAlpha = alpha;
       ctx.drawImage(img, dx, dy, dw, dh);
       ctx.globalAlpha = 1;
