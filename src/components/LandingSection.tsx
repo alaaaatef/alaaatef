@@ -37,7 +37,7 @@ export function FrameSequence({ images }: { images: HTMLImageElement[] }) {
       const cr = cw / ch;
       let dw, dh;
       // Contain image fully so face is never clipped
-      const scale = isMobile ? 0.88 : 0.93;
+      const scale = isMobile ? 0.75 : 0.82;
       if (ir > cr) {
         dh = ch * scale;
         dw = dh * ir;
