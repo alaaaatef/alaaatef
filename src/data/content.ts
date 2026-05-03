@@ -66,7 +66,7 @@ export const experiences = [
     company: "Digilians",
     period: "DEC 2025 – PRESENT",
     year: "2025",
-    logo: "/logos/digilians.png",
+    logo: "/logos/Digi.png",
     bullets: [
       "Learning practical applications of AI and Data Analysis through hands-on projects.",
       "Working with Python (Pandas, Matplotlib) for data analysis, EDA, and visualization.",
@@ -79,7 +79,7 @@ export const experiences = [
     company: "Al-Freeh Real Estate and Investments",
     period: "JUL 2024 – APR 2025 · Saudi Arabia (Remote)",
     year: "2024",
-    logo: "/logos/alfreeh.png",
+    logo: "/logos/1710595782463.png",
     bullets: [
       "Monitored rent collection KPIs and identified payment delays, directly supporting reduction of overdue balances.",
       "Developed and analyzed aging reports to surface overdue trends and strengthen collection strategy — improving cash flow visibility for management.",
@@ -91,7 +91,7 @@ export const experiences = [
     company: "Mishaal Group For Foodstuffs and Supplies",
     period: "DEC 2023 – JUL 2024 · Saudi Arabia (Remote)",
     year: "2023",
-    logo: "/logos/mishaal.png",
+    logo: "/logos/1710595782463.png",
     bullets: [
       "Prepared daily sales and financial reports for senior management review.",
       "Performed bank reconciliations and managed petty cash and bank transfers.",
@@ -103,7 +103,7 @@ export const experiences = [
     company: "Organic For Natural Oils",
     period: "JUN 2022 – AUG 2023 · Egypt",
     year: "2022",
-    logo: "/logos/organic.png",
+    logo: "/logos/Organic.png",
     bullets: [
       "Managed 200+ invoices monthly; maintained daily journal entries with zero tolerance for error.",
       "Prepared bank reconciliations and analyzed accounts receivable/payable positions.",
@@ -117,7 +117,7 @@ export const projects = [
     id: "01",
     title: "Body Performance Analytics",
     accent: "#00d4aa",
-    image: "/projects/body_performance.png",
+    image: "/projects/Body Performance.png",
     tagline: "End-to-End ML · Classification & Regression",
     description:
       "Analyzed 13,393 records across 12 physical features. Led EDA, feature engineering (BMI, Pulse Pressure), and benchmarked 5 ML models. Independently built the Neural Network — best result on the team: 75.77% classification accuracy and R² = 0.80 on regression.",
@@ -128,7 +128,7 @@ export const projects = [
     id: "02",
     title: "FashioNest E-Commerce Database",
     accent: "#8B5CF6",
-    image: "/projects/fashionest.png",
+    image: "/projects/E-commerce.png",
     tagline: "Database Architecture · SQL Analytics · Power BI",
     description:
       "Designed FashioNestDB from scratch: 16 tables, 4 schemas (Inventory · CustomerMgmt · Sales · Logistics), 59 constraints. Built advanced SQL views for Customer LTV, SLA tracking, and delivery performance. Delivered full EDA in Python, Orange Data Mining analysis, and a 3-page Power BI dashboard on 9,481 records.",
@@ -139,7 +139,7 @@ export const projects = [
     id: "03",
     title: "Pizza Sales Dashboard",
     accent: "#EF4444",
-    image: "/projects/pizza_sales.png",
+    image: "/projects/Pizza sales dashboard.png",
     tagline: "Sales Analytics · KPI Engineering · Power BI",
     description:
       "Analyzed 49,000+ pizza orders end-to-end. Engineered KPIs including Average Order Value and customer segmentation. Visualized hourly/daily sales trends and product performance to identify peak operational times — delivering data-driven recommendations for menu optimization and staffing.",
@@ -149,7 +149,7 @@ export const projects = [
 ];
 
 export const education = {
-  logo: "/logos/assiut_university.png",
+  logo: "/logos/University.png",
   degree: "Bachelor of Accounting (English Program)",
   faculty: "Faculty of Commerce",
   university: "Assiut University",
@@ -160,12 +160,52 @@ export const education = {
 
 export const courses = [
   {
-    id: "digilians_program",
-    title: "Applied AI & Data Analysis Program",
-    provider: "Digilians",
-    date: "2025 – Present",
-    image: "/courses/digilians_program.png",
-    skills: ["Python", "Power BI", "SQL", "Machine Learning"],
+    id: "01",
+    title: "Analyze Data to Answer Questions",
+    provider: "Google",
+    date: "Completed",
+    image: "/courses/Analyze.png",
+    skills: ["Pivot Tables And Charts", "SQL", "Query Languages", "Data Validation", "Data Transformation"],
+  },
+  {
+    id: "02",
+    title: "Process Data from Dirty to Clean",
+    provider: "Google",
+    date: "Completed",
+    image: "/courses/process.png",
+    skills: ["Data Quality", "Data Cleansing", "Data Integrity", "Spreadsheet Software", "Data Manipulation"],
+  },
+  {
+    id: "03",
+    title: "Prepare Data for Exploration",
+    provider: "Google",
+    date: "Completed",
+    image: "/courses/prepare.png",
+    skills: ["Data Ethics", "Unstructured Data", "Metadata Management", "Relational Databases", "Data Collection"],
+  },
+  {
+    id: "04",
+    title: "Ask Questions to Make Data-Driven Decisions",
+    provider: "Google",
+    date: "Completed",
+    image: "/courses/Ask.png",
+    skills: ["Dashboard", "Analytical Skills", "Quantitative Research", "Stakeholder Communications", "Data-Driven Decision-Making"],
+  },
+  {
+    id: "05",
+    title: "Foundations: Data, Data, Everywhere",
+    provider: "Google",
+    date: "Completed",
+    image: "/courses/Foundations.png",
+    skills: ["Data Visualization Software", "Data Sharing", "Data Literacy", "Analytics"],
+  },
+  {
+    id: "06",
+    title: "Delivering Quality Work with Agility",
+    provider: "IBM",
+    date: "Completed",
+    image: "/courses/Delivering quality ibm.png",
+    skills: ["Time Management", "Professional Development", "Quality Assurance", "Decision-Making"],
   },
 ];
 
@@ -173,8 +213,8 @@ export const contact = {
   email: "alaaa.atef956@gmail.com",
   phone: "+20 101 075 8269",
   location: "Cairo, Egypt",
-  linkedin: "https://www.linkedin.com/in/alaa-atef-356b85274",
-  linkedinLabel: "linkedin.com/in/alaa-atef-356b85274",
+  linkedin: "https://www.linkedin.com/in/alaa-atef-ahmed/",
+  linkedinLabel: "LinkedIn",
   github: "https://github.com/alaaaatef",
   githubLabel: "github.com/alaaaatef",
 };
