@@ -1,9 +1,12 @@
 import { contact } from "@/data/content";
 
 export function ContactSection() {
+  const whatsappNumber = contact.phone.replace(/[\s+]/g, "");
+  const whatsappUrl = `https://wa.me/${whatsappNumber}`;
+
   const rows = [
     { icon: "📧", label: contact.email, href: `mailto:${contact.email}` },
-    { icon: "📞", label: contact.phone, href: `tel:${contact.phone.replace(/\s/g, "")}` },
+    { icon: "📞", label: contact.phone, href: whatsappUrl, ext: true },
     { icon: "📍", label: contact.location },
     { icon: "💼", label: contact.linkedinLabel, href: contact.linkedin, ext: true },
     { icon: "🐙", label: contact.githubLabel, href: contact.github, ext: true },
@@ -28,7 +31,7 @@ export function ContactSection() {
             Send Email
           </a>
           <a
-            href="/Alaa_Atef_CV.pdf"
+            href="/Alaa CV.pdf"
             download
             className="rounded-full border border-[#00d4aa] px-6 py-3 text-sm font-bold text-[#00d4aa] transition hover:bg-[#00d4aa]/10"
           >
