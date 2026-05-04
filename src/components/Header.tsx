@@ -17,7 +17,7 @@ export function Header() {
   }, []);
 
   return (
-    <header className={`site-header fixed inset-x-0 top-0 z-50 ${open ? "bg-[#0a0a0a]" : "bg-transparent backdrop-blur-sm"}`}>
+    <header className={`site-header fixed inset-x-0 top-0 z-50 ${open ? "bg-[#0a0a0a]" : "bg-transparent"}`}>
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8">
         <a
           href="#top"
