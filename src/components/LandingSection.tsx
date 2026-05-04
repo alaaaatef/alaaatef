@@ -36,17 +36,17 @@ export function FrameSequence({ images }: { images: HTMLImageElement[] }) {
       const ir = img.naturalWidth / img.naturalHeight;
       const cr = cw / ch;
       let dw, dh;
-      // Contain image fully so face is never clipped
-      const scale = isMobile ? 0.75 : 0.82;
+      // Cover the full canvas so the image fills the screen
       if (ir > cr) {
-        dh = ch * scale;
-        dw = dh * ir;
+        dw = cw;
+        dh = cw / ir;
       } else {
-        dw = cw * scale;
-        dh = dw / ir;
+        dh = ch;
+        dw = ch * ir;
       }
       const dx = (cw - dw) / 2;
-      const dy = (ch - dh) / 2;
+      // Shift image up slightly so face/eyes/eyebrows are visible
+      const dy = isMobile ? (ch - dh) / 2 - dh * 0.05 : (ch - dh) / 2;
       ctx.globalAlpha = alpha;
       ctx.drawImage(img, dx, dy, dw, dh);
       ctx.globalAlpha = 1;

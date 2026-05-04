@@ -216,5 +216,5 @@ export const contact = {
   linkedin: "https://www.linkedin.com/in/alaa-atef-ahmed/",
   linkedinLabel: "LinkedIn",
   github: "https://github.com/alaaaatef",
-  githubLabel: "github.com/alaaaatef",
+  githubLabel: "Github",
 };
