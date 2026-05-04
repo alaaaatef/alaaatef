@@ -34,6 +34,8 @@ export function EducationSection() {
                 src={education.logo}
                 alt={education.university}
                 onError={() => setErr(true)}
+                loading="lazy"
+                decoding="async"
                 className="h-20 w-20 rounded-xl object-cover"
               />
             )}
