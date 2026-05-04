@@ -138,7 +138,7 @@ export function SkillsOrbitSection() {
                 <div className="mt-1 text-[10px] uppercase tracking-widest text-white">{picked.name}</div>
               </div>
             ) : (
-              <img src="/profile.png" alt="Alaa Atef" className="h-full w-full object-cover" onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = "none"; }} />
+              <img src="/profile.png" alt="Alaa Atef" loading="lazy" decoding="async" className="h-full w-full object-cover" onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = "none"; }} />
             )}
           </div>
         </div>

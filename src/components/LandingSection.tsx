@@ -16,7 +16,7 @@ export function FrameSequence({ images }: { images: HTMLImageElement[] }) {
     const wrap = wrapRef.current!;
     const ctx = canvas.getContext("2d")!;
     const isMobile = window.innerWidth < 768;
-    const dpr = Math.min(window.devicePixelRatio || 1, isMobile ? 1.5 : 2);
+    const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
 
     const setSize = () => {
       const w = window.innerWidth;
@@ -86,7 +86,7 @@ export function FrameSequence({ images }: { images: HTMLImageElement[] }) {
   return (
     <div ref={wrapRef} className="relative w-full" style={{ height: "400vh" }}>
       <div className="sticky top-0 z-0 h-screen w-full overflow-hidden bg-black">
-        <canvas ref={canvasRef} className="absolute inset-0" />
+        <canvas ref={canvasRef} className="absolute inset-0" style={{ willChange: "transform" }} />
         {/* desktop overlays */}
         <div className="pointer-events-none absolute inset-0 hidden md:block">
           <div className="absolute inset-0 bg-gradient-to-r from-[#00d4aa]/10 to-transparent" />

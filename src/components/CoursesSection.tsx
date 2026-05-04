@@ -20,6 +20,8 @@ function CourseImg({ src, title }: { src: string; title: string }) {
       src={src}
       alt={title}
       onError={() => setErr(true)}
+      loading="lazy"
+      decoding="async"
       className="aspect-video w-full rounded-t-xl object-cover"
     />
   );

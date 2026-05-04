@@ -20,6 +20,8 @@ function CompanyLogo({ src, name }: { src: string; name: string }) {
       src={src}
       alt={name}
       onError={() => setErr(true)}
+      loading="lazy"
+      decoding="async"
       className="h-8 w-8 shrink-0 rounded-md object-cover"
     />
   );

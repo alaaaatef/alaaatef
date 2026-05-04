@@ -113,6 +113,8 @@ function ProjectImage({ src, accent, number }: { src: string; accent: string; nu
       src={src}
       onError={() => setErr(true)}
       alt=""
+      loading="lazy"
+      decoding="async"
       className="relative h-full w-full object-contain p-6 transition-transform duration-500 hover:scale-105"
     />
   );
