@@ -32,7 +32,8 @@ export function ContactSection() {
           </a>
           <a
             href="/Alaa CV.pdf"
-            download
+            download="Alaa CV.pdf"
+            type="application/pdf"
             className="rounded-full border border-[#00d4aa] px-6 py-3 text-sm font-bold text-[#00d4aa] transition hover:bg-[#00d4aa]/10"
           >
             Download CV

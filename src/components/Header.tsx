@@ -41,8 +41,9 @@ export function Header() {
           ))}
           <a
             href="/Alaa CV.pdf"
-            download
-            className="nav-item rounded-full border border-[#6b4f3a] bg-black/50 px-4 py-2 text-xs font-medium uppercase tracking-widest text-white transition hover:bg-black/80"
+            download="Alaa CV.pdf"
+            type="application/pdf"
+            className="nav-item rounded-full border border-[#00d4aa]/60 bg-transparent px-4 py-2 text-xs font-medium uppercase tracking-widest text-white transition hover:bg-[#00d4aa]/10"
           >
             Download CV →
           </a>
@@ -74,9 +75,10 @@ export function Header() {
             ))}
             <a
               href="/Alaa CV.pdf"
-              download
+              download="Alaa CV.pdf"
+              type="application/pdf"
               onClick={() => setOpen(false)}
-              className="mt-4 rounded-full border border-[#6b4f3a] bg-black/50 px-4 py-3 text-center text-xs uppercase tracking-widest text-white"
+              className="mt-4 rounded-full border border-[#00d4aa]/60 bg-transparent px-4 py-3 text-center text-xs uppercase tracking-widest text-white"
             >
               Download CV →
             </a>
