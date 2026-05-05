@@ -6,7 +6,7 @@ export function ContactSection() {
 
   const rows = [
     { icon: "📧", label: contact.email, href: `mailto:${contact.email}` },
-    { icon: "📞", label: contact.phone, href: whatsappUrl, ext: true },
+    { icon: "📞", label: "Contact Me", href: whatsappUrl, ext: true },
     { icon: "📍", label: contact.location },
     { icon: "💼", label: contact.linkedinLabel, href: contact.linkedin, ext: true },
     { icon: "🐙", label: contact.githubLabel, href: contact.github, ext: true },
@@ -31,9 +31,10 @@ export function ContactSection() {
             Send Email
           </a>
           <a
-            href="/Alaa CV.pdf"
-            download="Alaa CV.pdf"
-            type="application/pdf"
+            href="/Alaa_CV.pdf"
+            download="Alaa_Atef_CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-full border border-[#00d4aa] px-6 py-3 text-sm font-bold text-[#00d4aa] transition hover:bg-[#00d4aa]/10"
           >
             Download CV
