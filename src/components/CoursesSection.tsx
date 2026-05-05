@@ -22,7 +22,7 @@ function CourseImg({ src, title }: { src: string; title: string }) {
       onError={() => setErr(true)}
       loading="lazy"
       decoding="async"
-      className="aspect-video w-full rounded-t-xl object-cover"
+      style={{ width: "100%", height: "200px", objectFit: "cover", objectPosition: "center top", borderRadius: "12px 12px 0 0", display: "block" }}
     />
   );
 }

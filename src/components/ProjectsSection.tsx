@@ -115,7 +115,8 @@ function ProjectImage({ src, accent, number }: { src: string; accent: string; nu
       alt=""
       loading="lazy"
       decoding="async"
-      className="relative h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+      style={{ width: "100%", height: "200px", objectFit: "cover", objectPosition: "center top", display: "block" }}
+      className="relative transition-transform duration-500 hover:scale-105"
     />
   );
 }
