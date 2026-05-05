@@ -117,7 +117,7 @@ export const projects = [
     id: "01",
     title: "Body Performance Analytics",
     accent: "#00d4aa",
-    image: "/projects/Body Performance analysis.png",
+    image: "/projects/Body_Performance_analysis.png",
     tagline: "End-to-End ML · Classification & Regression",
     description:
       "Analyzed 13,393 records across 12 physical features. Led EDA, feature engineering (BMI, Pulse Pressure), and benchmarked 5 ML models. Independently built the Neural Network — best result on the team: 75.77% classification accuracy and R² = 0.80 on regression.",
@@ -128,7 +128,7 @@ export const projects = [
     id: "02",
     title: "FashioNest E-Commerce Database",
     accent: "#8B5CF6",
-    image: "/projects/E-commerce Database.png",
+    image: "/projects/E-commerce_Database.png",
     tagline: "Database Architecture · SQL Analytics · Power BI",
     description:
       "Designed FashioNestDB from scratch: 16 tables, 4 schemas (Inventory · CustomerMgmt · Sales · Logistics), 59 constraints. Built advanced SQL views for Customer LTV, SLA tracking, and delivery performance. Delivered full EDA in Python, Orange Data Mining analysis, and a 3-page Power BI dashboard on 9,481 records.",
@@ -139,7 +139,7 @@ export const projects = [
     id: "03",
     title: "Pizza Sales Dashboard",
     accent: "#EF4444",
-    image: "/projects/Pizza sales Dashboard.png",
+    image: "/projects/Pizza_sales_Dashboard.png",
     tagline: "Sales Analytics · KPI Engineering · Power BI",
     description:
       "Analyzed 49,000+ pizza orders end-to-end. Engineered KPIs including Average Order Value and customer segmentation. Visualized hourly/daily sales trends and product performance to identify peak operational times — delivering data-driven recommendations for menu optimization and staffing.",
@@ -202,10 +202,10 @@ export const courses = [
   {
     id: "06",
     title: "Delivering Quality Work with Agility",
-    provider: "IBM",
-    date: "Completed",
-    image: "/courses/Delivering quality.png",
-    skills: ["Time Management", "Professional Development", "Quality Assurance", "Decision-Making"],
+    provider: "IBM — Coursera",
+    date: "January 25, 2026",
+    image: "/courses/Delivering_quality.png",
+    skills: ["Agility", "Quality Management", "IBM", "Coursera"],
   },
 ];
 
