@@ -16,14 +16,16 @@ function CourseImg({ src, title }: { src: string; title: string }) {
     );
   }
   return (
-    <img
-      src={src}
-      alt={title}
-      onError={() => setErr(true)}
-      loading="lazy"
-      decoding="async"
-      style={{ width: "100%", height: "200px", objectFit: "cover", objectPosition: "center top", borderRadius: "12px 12px 0 0", display: "block" }}
-    />
+    <div style={{ width: "100%", height: "220px", overflow: "hidden", borderRadius: "12px 12px 0 0", backgroundColor: "#000", display: "flex", alignItems: "center", justifyContent: "center" }}>
+      <img
+        src={src}
+        alt={title}
+        onError={() => setErr(true)}
+        loading="lazy"
+        decoding="async"
+        style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", display: "block" }}
+      />
+    </div>
   );
 }
 
