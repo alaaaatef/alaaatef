@@ -76,10 +76,11 @@ export function ProjectsSection() {
               style={{ background: proj.accent }}
             />
             <div
-              className="relative overflow-hidden rounded-2xl border backdrop-blur"
+              className="relative aspect-video overflow-hidden rounded-2xl border bg-white/5 backdrop-blur"
               style={{ borderColor: `${proj.accent}66`, boxShadow: `0 20px 80px ${proj.accent}33` }}
             >
-              <div style={{ width: "100%", height: "220px", overflow: "hidden", borderRadius: "12px 12px 0 0", backgroundColor: "#000", display: "flex", alignItems: "center", justifyContent: "center" }}>
+              <div className="absolute inset-0" style={{ background: `radial-gradient(circle at 30% 20%, ${proj.accent}22, transparent 60%)` }} />
+              <div style={{ width: "100%", height: "240px", overflow: "hidden", borderRadius: "12px 12px 0 0", backgroundColor: "#000" }}>
                 <ProjectImage src={proj.image} accent={proj.accent} number={proj.id} />
               </div>
             </div>
