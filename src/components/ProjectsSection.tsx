@@ -76,11 +76,12 @@ export function ProjectsSection() {
               style={{ background: proj.accent }}
             />
             <div
-              className="relative aspect-video overflow-hidden rounded-2xl border bg-white/5 backdrop-blur"
+              className="relative overflow-hidden rounded-2xl border backdrop-blur"
               style={{ borderColor: `${proj.accent}66`, boxShadow: `0 20px 80px ${proj.accent}33` }}
             >
-              <div className="absolute inset-0" style={{ background: `radial-gradient(circle at 30% 20%, ${proj.accent}22, transparent 60%)` }} />
-              <ProjectImage src={proj.image} accent={proj.accent} number={proj.id} />
+              <div style={{ width: "100%", height: "220px", overflow: "hidden", borderRadius: "12px 12px 0 0", backgroundColor: "#000", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                <ProjectImage src={proj.image} accent={proj.accent} number={proj.id} />
+              </div>
             </div>
             <div className="mt-5 flex justify-center gap-2">
               {projects.map((_, i) => (
@@ -115,7 +116,7 @@ function ProjectImage({ src, accent, number }: { src: string; accent: string; nu
       alt=""
       loading="lazy"
       decoding="async"
-      style={{ width: "100%", height: "auto", maxHeight: "220px", objectFit: "contain", objectPosition: "center", backgroundColor: "#000000", borderRadius: "12px 12px 0 0", display: "block" }}
+      style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", display: "block" }}
       className="relative transition-transform duration-500 hover:scale-105"
     />
   );
