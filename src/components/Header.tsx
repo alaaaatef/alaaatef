@@ -44,6 +44,19 @@ export function Header() {
             download="Alaa_Atef_CV.pdf"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={(e) => {
+              fetch('/Alaa_CV.pdf')
+                .then(res => {
+                  if (!res.ok) {
+                    e.preventDefault();
+                    window.open('/Alaa_CV.pdf', '_blank');
+                  }
+                })
+                .catch(() => {
+                  e.preventDefault();
+                  window.open('/Alaa_CV.pdf', '_blank');
+                });
+            }}
             className="nav-item rounded-full border border-[#00d4aa]/60 bg-transparent px-4 py-2 text-xs font-medium uppercase tracking-widest text-white transition hover:bg-[#00d4aa]/10"
           >
             Download CV →
@@ -79,7 +92,20 @@ export function Header() {
               download="Alaa_Atef_CV.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => setOpen(false)}
+              onClick={(e) => {
+                setOpen(false);
+                fetch('/Alaa_CV.pdf')
+                  .then(res => {
+                    if (!res.ok) {
+                      e.preventDefault();
+                      window.open('/Alaa_CV.pdf', '_blank');
+                    }
+                  })
+                  .catch(() => {
+                    e.preventDefault();
+                    window.open('/Alaa_CV.pdf', '_blank');
+                  });
+              }}
               className="mt-4 rounded-full border border-[#00d4aa]/60 bg-transparent px-4 py-3 text-center text-xs uppercase tracking-widest text-white"
             >
               Download CV →

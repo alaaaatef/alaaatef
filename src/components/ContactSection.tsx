@@ -35,6 +35,19 @@ export function ContactSection() {
             download="Alaa_Atef_CV.pdf"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={(e) => {
+              fetch('/Alaa_CV.pdf')
+                .then(res => {
+                  if (!res.ok) {
+                    e.preventDefault();
+                    window.open('/Alaa_CV.pdf', '_blank');
+                  }
+                })
+                .catch(() => {
+                  e.preventDefault();
+                  window.open('/Alaa_CV.pdf', '_blank');
+                });
+            }}
             className="rounded-full border border-[#00d4aa] px-6 py-3 text-sm font-bold text-[#00d4aa] transition hover:bg-[#00d4aa]/10"
           >
             Download CV
