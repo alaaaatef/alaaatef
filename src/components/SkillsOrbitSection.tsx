@@ -109,8 +109,7 @@ export function SkillsOrbitSection() {
 
       <div className="relative mx-auto max-w-7xl">
         <h2 className="skills-head text-center font-display text-5xl font-bold md:text-7xl">
-          <span className="text-gradient-white">Tech </span>
-          <span className="text-gradient-teal">Stack</span>
+          <span className="text-gradient-teal">Skills</span>
         </h2>
         <p className="skills-head mt-3 text-center text-sm text-gray-500">
           <span className="hidden md:inline">Hover</span>
